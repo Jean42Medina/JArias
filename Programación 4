@@ -1,0 +1,63 @@
+ngonInit () {
+    this. derivada () ;
+    this.graficar () ;
+}
+Derivada () {
+    this. fusion = 'd( Sin (x))/dx ';
+    const h = 1 ;
+    let fx = 0 ;
+    for(let i= 0; i<=4 ; i++) {
+        this . etiquetas . push ( i. toString()) ;
+        fx = Math . round ( Math . random () ) ;
+        let fxMash = Math . round ( Math . random () + h ) ;
+        let Derivada = ( fxmash - fx) /h ;
+        this . cantidad . push (' Derivadas') ;
+    }
+}
+Graficar () {
+    this . piechart = new chart ( this . pieCanvas.nativeelelemento);{
+        type:'pie';
+        data: {
+            label: this .etiquetas,
+            Data:[{
+                label: this.fusion ,
+                data: this . valores,
+                backgroundcolor: [
+                    'rgba ( 255, 00, 256, 00)' ,
+                    'rgba (00. 250, 250, 00)' ,
+                    'rgba (255, 206, 86, 250)' ,
+                    'rgba (192; 00; 75, 250)' ,
+                    'rgba (155, 100, 00, 250)' ,
+                ] ,
+                borderColor: [
+                    'rgba ( 200, 210, 256, 00)' ,
+                    'rgba (00. 250, 250, 120)' ,
+                    'rgba (258, 00, 86, 100)' ,
+                    'rgba (210; 250; 75, 78)' ,
+                    'rgba (158, 75, 00, 250)' ,
+                ] ,
+                borderWidth: 1
+            }] 
+        } ,
+        options: [
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                     }
+                    }]    
+                }               
+            }]    
+        }.
+        options:{
+            scales: {
+                yAxes:{
+                    ticks:{
+                      beginAtZero: true
+                      }
+                    }]
+                 }
+            }
+        });   
+    }
+}
